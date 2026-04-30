@@ -7,10 +7,7 @@
       <div class="post_body">
         <div class="post_inner">
         {{ $image := partial "func/getImage" . }}
-        {{ with .Params.image }}
-          <img src="{{ $image }}" alt="{{ . }}" class="post_thumbnail">
-        {{ end }}
-          {{ .Content }}
+        {{ .Content }}
         </div>
         <div class="post_extra mb-2">
           {{ partialCached "share" . }}
